@@ -323,17 +323,26 @@
 // doublyLinkedList.displayForward();
 // doublyLinkedList.displayBackward();
 
-const sortedArrays = (arr1, arr2) => {
-    let newArr = [];
-    for (let i = 0; i < arr2.length; i++) {
-        if(arr1.indexOf(arr2[i]) > 0) {
-            if(newArr.indexOf(arr2[i]) === -1) {
-                newArr.push(arr2[i])
-            }
-        }
-    }
-    return newArr;
-}
+// const sortedArrays = (arr1, arr2) => {
+//     let newArr = [];
+//     for (let i = 0; i < arr2.length; i++) {
+//         if(arr1.indexOf(arr2[i]) > 0) {
+//             if(newArr.indexOf(arr2[i]) === -1) {
+//                 newArr.push(arr2[i])
+//             }
+//         }
+//     }
+//     return newArr;
+// }
 
-sortedArrays([1, 2, 2, 3, 4, 5], [2, 2, 4, 6, 7, 8])
+// sortedArrays([1, 2, 2, 3, 4, 5], [2, 2, 4, 6, 7, 8])
 //return [2, 4]
+
+const getFrequencies = (arr) => {
+   return arr.reduce((obj, cur) => {
+    !obj[cur] ? obj[cur] = 1 : obj[cur]++;
+    return obj;
+   }, {})
+};
+
+console.log(getFrequencies(["A", "B", "A", "A", "A"]));
