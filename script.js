@@ -347,12 +347,19 @@
 
 // console.log(getFrequencies(["A", "B", "A", "A", "A"]));
 
-const reverseString = (str) => {
-   let reversedStr = '';
-   for (let i = str.length - 1; i >= 0; i--) {
-   reversedStr += str[i];      
-   }
-   return reversedStr;
+// const reverseString = (str) => {
+//    let reversedStr = '';
+//    for (let i = str.length - 1; i >= 0; i--) {
+//    reversedStr += str[i];      
+//    }
+//    return reversedStr;
+// }
+
+// console.log(reverseString('Hello')); //output: elloH
+
+const isPalindrome = (str) => {
+   const reversedStr = str.split('').reverse().join('');
+   return str === reversedStr;
 }
 
-console.log(reverseString('Hello')); //output: elloH
+console.log(isPalindrome('racecar'))
