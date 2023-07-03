@@ -338,11 +338,21 @@
 // sortedArrays([1, 2, 2, 3, 4, 5], [2, 2, 4, 6, 7, 8])
 //return [2, 4]
 
-const getFrequencies = (arr) => {
-   return arr.reduce((obj, cur) => {
-    !obj[cur] ? obj[cur] = 1 : obj[cur]++;
-    return obj;
-   }, {})
-};
+// const getFrequencies = (arr) => {
+//    return arr.reduce((obj, cur) => {
+//     !obj[cur] ? obj[cur] = 1 : obj[cur]++;
+//     return obj;
+//    }, {})
+// };
 
-console.log(getFrequencies(["A", "B", "A", "A", "A"]));
+// console.log(getFrequencies(["A", "B", "A", "A", "A"]));
+
+const reverseString = (str) => {
+   let reversedStr = '';
+   for (let i = str.length - 1; i >= 0; i--) {
+   reversedStr += str[i];      
+   }
+   return reversedStr;
+}
+
+console.log(reverseString('Hello')); //output: elloH
