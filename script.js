@@ -357,9 +357,27 @@
 
 // console.log(reverseString('Hello')); //output: elloH
 
-const isPalindrome = (str) => {
-   const reversedStr = str.split('').reverse().join('');
-   return str === reversedStr;
-}
+// const isPalindrome = (str) => {
+//    const reversedStr = str.split('').reverse().join('');
+//    return str === reversedStr;
+// }
 
-console.log(isPalindrome('racecar'))
+// console.log(isPalindrome('racecar'))
+
+function selectionSort(arr) {
+   const len = arr.length;
+   for (let i = 0; i < len - 1; i++) {
+     let minIndex = i;
+     for (let j = i + 1; j < len; j++) {
+       if (arr[j] < arr[minIndex]) {
+         minIndex = j;
+       }
+     }
+     if (minIndex !== i) {
+       const temp = arr[i];
+       arr[i] = arr[minIndex];
+       arr[minIndex] = temp;
+     }
+   }
+   return arr;
+ }
