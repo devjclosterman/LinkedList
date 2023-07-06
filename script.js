@@ -382,6 +382,20 @@
 //    return arr;
 //  }
 
-let paragraph = document.createElement('p');
-paragraph.textContent = 'Hello, world!';
-document.body.appendChild(paragraph);
+// let paragraph = document.createElement('p');
+// paragraph.textContent = 'Hello, world!';
+// document.body.appendChild(paragraph);
+
+let button = document.querySelector('button');
+button.addEventListener('click', () => {
+  console.log('Button Clicked!');
+})
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+let person1 = new Person('John', 25);
+console.log(person1.name);
+console.log(person1.age);
